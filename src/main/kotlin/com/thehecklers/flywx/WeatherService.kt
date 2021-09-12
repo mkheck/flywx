@@ -3,11 +3,10 @@ package com.thehecklers.flywx
 import org.springframework.stereotype.Service
 import org.springframework.web.reactive.function.client.WebClient
 import org.springframework.web.reactive.function.client.bodyToMono
-import reactor.core.publisher.Mono
 
 @Service
 class WeatherService {
-    val tokenParam = "?token=<insert_token_here"
+    val tokenParam = "?token=d-WWvxQSAghEuefHBXVdzypUnpB-4Rk9qvm__I4RA7U"
 
     val client = WebClient.create("https://avwx.rest/api/metar/")
 
