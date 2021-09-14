@@ -6,14 +6,14 @@ import org.springframework.web.reactive.function.client.bodyToMono
 
 @Service
 class WeatherService {
-    val tokenParam = "?token=d-WWvxQSAghEuefHBXVdzypUnpB-4Rk9qvm__I4RA7U"
+    val tokenParam = "?token=xyz123"
 
     val client = WebClient.create("https://avwx.rest/api/metar/")
 
     fun getMETAR(loc: String?) = client.get()
         .uri(
             if (loc.isNullOrEmpty()) {
-                "KALN$tokenParam"
+                "KSTL$tokenParam"
             } else {
                 "$loc$tokenParam"
             }
